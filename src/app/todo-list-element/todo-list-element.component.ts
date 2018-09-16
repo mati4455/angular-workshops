@@ -7,12 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoListElementComponent implements OnInit {
 
+  removed = false;
+
   constructor() { }
 
   ngOnInit() {
   }
 
   remove(event) {
+    this.removed = true;
     alert('List element clicked!');
   }
 }

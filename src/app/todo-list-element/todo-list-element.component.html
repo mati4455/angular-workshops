@@ -1,4 +1,5 @@
 <p>
   <ng-content></ng-content>
-  <button type="button" (click)="remove($event)">Remove</button>
+  <button type="button" (click)="remove($event)" [disabled]="removed">Remove</button>
+  <span *ngIf="removed">Removed</span>
 </p>
