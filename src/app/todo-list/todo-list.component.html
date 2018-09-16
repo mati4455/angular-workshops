@@ -1,9 +1,7 @@
 <h2>ToDo List</h2>
 <h3>Items:</h3>
 <ul>
-  <li>Item 1</li>
-  <li>Item 2</li>
-  <li>
-    <app-todo-list-element>Heheszki</app-todo-list-element>
+  <li *ngFor="let item of listElements">
+    <app-todo-list-element>{{ item }}</app-todo-list-element>
   </li>
 </ul>

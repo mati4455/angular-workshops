@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoListComponent implements OnInit {
 
+  listElements: string[] = [];
+
   constructor() { }
 
   ngOnInit() {
+    this.listElements = [
+      'Item 1',
+      'Item 2',
+      'Item 3'
+    ];
   }
 
 }
