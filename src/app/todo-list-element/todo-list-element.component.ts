@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ListElement } from '../model/list-element.model';
 
 @Component({
   selector: 'app-todo-list-element',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todo-list-element.component.scss']
 })
 export class TodoListElementComponent implements OnInit {
+
+  @Input() data: ListElement;
+  @Output() removeItem: EventEmitter<ListElement> = new EventEmitter<ListElement>();
 
   removed = false;
 
@@ -16,6 +20,6 @@ export class TodoListElementComponent implements OnInit {
 
   remove(event) {
     this.removed = true;
-    alert('List element clicked!');
+    this.removeItem.emit(this.data);
   }
 }

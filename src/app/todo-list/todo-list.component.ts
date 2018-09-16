@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ListElement } from '../model/list-element.model';
 
 @Component({
   selector: 'app-todo-list',
@@ -7,16 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoListComponent implements OnInit {
 
-  listElements: string[] = [];
+  listElements: ListElement[] = [];
 
   constructor() { }
 
   ngOnInit() {
     this.listElements = [
-      'Item 1',
-      'Item 2',
-      'Item 3'
+      new ListElement('Item 1'),
+      new ListElement('Item 2', true),
+      new ListElement('Item 3')
     ];
+  }
+
+  remove(index: number): void {
+    this.listElements[index].done = true;
   }
 
 }

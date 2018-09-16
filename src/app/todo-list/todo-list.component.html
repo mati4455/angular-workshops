@@ -1,7 +1,7 @@
 <h2>ToDo List</h2>
 <h3>Items:</h3>
 <ul>
-  <li *ngFor="let item of listElements">
-    <app-todo-list-element>{{ item }}</app-todo-list-element>
+  <li *ngFor="let item of listElements, let i = index">
+    <app-todo-list-element [data]="item" (removeItem)="remove(i)"></app-todo-list-element>
   </li>
 </ul>

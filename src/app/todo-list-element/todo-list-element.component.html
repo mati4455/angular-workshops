@@ -1,5 +1,4 @@
-<p>
-  <ng-content></ng-content>
-  <button type="button" (click)="remove($event)" [disabled]="removed">Remove</button>
-  <span *ngIf="removed">Removed</span>
+<p [class.cross]="data.done">
+  {{ data.title }}
+  <button type="button" (click)="remove($event)" [disabled]="data.done">Remove</button>
 </p>
