@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { TodoListComponent } from './todo-list/todo-list.component';
+import { CurrentDatetimeComponent } from './current-datetime/current-datetime.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoListComponent
+    TodoListComponent,
+    CurrentDatetimeComponent
   ],
   imports: [
     BrowserModule
