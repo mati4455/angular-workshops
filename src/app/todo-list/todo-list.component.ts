@@ -25,7 +25,7 @@ export class TodoListComponent implements OnInit {
   }
 
   remove(index: number): void {
-    this.listElements[index].done = true;
+    this.listElements.splice(index, 1);
   }
 
 }

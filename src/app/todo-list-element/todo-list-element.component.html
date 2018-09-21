@@ -1,4 +1,4 @@
 <p [class.cross]="data.done">
-  {{ data.title }}
-  <button type="button" (click)="remove($event)" [disabled]="data.done">Remove</button>
+  <span (click)="toggleStatus()">{{ data.title }}</span>
+  <button type="button" (click)="remove($event)">Remove</button>
 </p>

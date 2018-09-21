@@ -18,6 +18,10 @@ export class TodoListElementComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggleStatus() {
+    this.data.done = !this.data.done;
+  }
+
   remove(event) {
     this.removed = true;
     this.removeItem.emit(this.data);

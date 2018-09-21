@@ -8,3 +8,8 @@
     <app-todo-list-element [data]="item" (removeItem)="remove(i)"></app-todo-list-element>
   </li>
 </ul>
+
+
+<div *ngFor="let item of listElements">
+  <p>{{ item.done }}</p>
+</div>
