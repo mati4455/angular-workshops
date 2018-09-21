@@ -1,9 +1,7 @@
-<form>
-  <div>
-    <label for="task-title">Task</label>
-    <input type="text" name="title" id="task-title" />
-  </div>
-  <button type="submit">
-    Add
-  </button>
-</form>
+<div>
+  <label for="task-title">Task</label>
+  <input type="text" name="title" id="task-title" #inputTitle />
+</div>
+<button type="button" (click)="add(inputTitle)">
+  Add
+</button>

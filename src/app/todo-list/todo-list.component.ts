@@ -20,6 +20,10 @@ export class TodoListComponent implements OnInit {
     ];
   }
 
+  add(title: string): void {
+    this.listElements.push(new ListElement(title));
+  }
+
   remove(index: number): void {
     this.listElements[index].done = true;
   }
